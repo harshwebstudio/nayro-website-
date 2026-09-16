@@ -1,10 +1,10 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>NAYRO — A Cleaner Standard</title>
+  <title>NAYRO | A Cleaner Standard</title>
 
   <style>
     * {
@@ -13,213 +13,145 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f5f2;
+      font-family: Arial, sans-serif;
+      background: #f7f7f5;
       color: #111;
     }
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 7%;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid #e5e5e5;
+      padding: 22px 7%;
+      background: #fff;
     }
 
     .logo {
-      font-size: 26px;
-      font-weight: 900;
-      letter-spacing: 5px;
-    }
-
-    nav {
-      display: flex;
-      gap: 22px;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 4px;
     }
 
     nav a {
-      color: #111;
       text-decoration: none;
+      color: #111;
+      margin-left: 20px;
       font-size: 14px;
     }
 
     .hero {
-      min-height: 82vh;
-      padding: 90px 7%;
+      min-height: 75vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding: 70px 7%;
       background: #fff;
     }
 
-    .eyebrow {
-      font-size: 12px;
-      letter-spacing: 4px;
+    .hero p {
+      font-size: 14px;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
       text-transform: uppercase;
-      color: #777;
-      margin-bottom: 22px;
     }
 
     .hero h1 {
-      font-size: clamp(55px, 14vw, 120px);
-      line-height: 0.88;
-      letter-spacing: -6px;
+      font-size: clamp(50px, 12vw, 100px);
+      line-height: .9;
       max-width: 900px;
+      letter-spacing: -5px;
     }
 
     .hero h1 span {
-      color: #888;
+      color: #777;
     }
 
-    .hero-text {
-      max-width: 500px;
-      margin-top: 30px;
-      color: #666;
-      line-height: 1.7;
-      font-size: 16px;
-    }
-
-    .btn {
-      display: inline-block;
+    .hero button {
       width: fit-content;
-      margin-top: 30px;
-      padding: 16px 28px;
-      border-radius: 50px;
+      margin-top: 35px;
+      padding: 15px 28px;
+      border: none;
       background: #111;
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
+      color: #fff;
+      border-radius: 30px;
+      font-size: 15px;
+      cursor: pointer;
     }
 
     .products {
-      padding: 90px 7%;
-    }
-
-    .section-label {
-      font-size: 12px;
-      letter-spacing: 3px;
-      color: #888;
-      text-transform: uppercase;
-      margin-bottom: 12px;
+      padding: 80px 7%;
     }
 
     .section-title {
-      font-size: 45px;
-      margin-bottom: 45px;
+      font-size: 40px;
+      margin-bottom: 40px;
     }
 
-    .grid {
+    .product-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
 
-    .card {
-      min-height: 400px;
-      padding: 28px;
-      border-radius: 24px;
+    .product {
       background: #fff;
-      border: 1px solid #e7e7e7;
+      padding: 30px;
+      min-height: 280px;
+      border-radius: 20px;
       display: flex;
       flex-direction: column;
-      transition: 0.3s;
+      justify-content: flex-end;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
-    }
-
-    .number {
-      color: #999;
+    .product-number {
+      color: #888;
       font-size: 13px;
+      margin-bottom: auto;
     }
 
-    .product-space {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 70px;
-    }
-
-    .card h3 {
+    .product h3 {
       font-size: 25px;
       margin-bottom: 8px;
     }
 
-    .card p {
-      color: #777;
+    .product p {
+      color: #666;
       line-height: 1.5;
-      font-size: 14px;
     }
 
     .about {
-      padding: 110px 7%;
+      padding: 90px 7%;
       background: #111;
-      color: white;
+      color: #fff;
     }
 
     .about h2 {
-      font-size: clamp(40px, 8vw, 80px);
-      line-height: 1;
-      letter-spacing: -3px;
-      max-width: 800px;
-      margin-bottom: 30px;
-    }
-
-    .about p {
-      max-width: 600px;
-      color: #bbb;
-      line-height: 1.8;
-    }
-
-    .contact {
-      padding: 90px 7%;
-      background: #fff;
-    }
-
-    .contact h2 {
       font-size: 45px;
-      margin-bottom: 20px;
-    }
-
-    .contact p {
-      color: #777;
+      max-width: 700px;
       margin-bottom: 25px;
     }
 
-    footer {
-      padding: 28px 7%;
-      background: #111;
-      color: #777;
-      font-size: 13px;
+    .about p {
+      max-width: 650px;
+      line-height: 1.7;
+      color: #ccc;
     }
 
-    @media (max-width: 700px) {
-      nav {
+    footer {
+      padding: 30px 7%;
+      background: #111;
+      color: #777;
+      border-top: 1px solid #333;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
         display: none;
       }
 
       .hero h1 {
-        letter-spacing: -4px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .card {
-        min-height: 330px;
+        letter-spacing: -3px;
       }
     }
   </style>
@@ -233,76 +165,46 @@
     <nav>
       <a href="#products">Products</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
     </nav>
   </header>
 
 
   <section class="hero">
-
-    <div class="eyebrow">Modern Cleaning Solutions</div>
+    <p>Modern Cleaning Solutions</p>
 
     <h1>
       A Cleaner<br>
       <span>Standard.</span>
     </h1>
 
-    <p class="hero-text">
-      Modern cleaning solutions designed for cleaner
-      spaces, everyday living and a better cleaning experience.
-    </p>
-
-    <a class="btn" href="#products">
-      Explore Products →
-    </a>
-
+    <button onclick="document.getElementById('products').scrollIntoView()">
+      Explore Products
+    </button>
   </section>
 
 
   <section class="products" id="products">
 
-    <div class="section-label">NAYRO Collection</div>
-
     <h2 class="section-title">Our Products</h2>
 
-    <div class="grid">
+    <div class="product-grid">
 
-      <div class="card">
-        <div class="number">01</div>
-
-        <div class="product-space">🧴</div>
-
+      <div class="product">
+        <div class="product-number">01</div>
         <h3>Floor Cleaner</h3>
-
-        <p>
-          Everyday cleaning for a fresh and clean floor.
-        </p>
+        <p>Powerful everyday cleaning for a fresh, clean floor.</p>
       </div>
 
-
-      <div class="card">
-        <div class="number">02</div>
-
-        <div class="product-space">🫧</div>
-
+      <div class="product">
+        <div class="product-number">02</div>
         <h3>Bathroom Cleaner</h3>
-
-        <p>
-          Designed for everyday bathroom surface cleaning.
-        </p>
+        <p>Designed for effective bathroom surface cleaning.</p>
       </div>
 
-
-      <div class="card">
-        <div class="number">03</div>
-
-        <div class="product-space">✨</div>
-
+      <div class="product">
+        <div class="product-number">03</div>
         <h3>Glass Cleaner</h3>
-
-        <p>
-          Helps keep glass surfaces clean and clear.
-        </p>
+        <p>Helps keep glass surfaces clean and clear.</p>
       </div>
 
     </div>
@@ -312,32 +214,14 @@
 
   <section class="about" id="about">
 
-    <div class="section-label">About NAYRO</div>
-
     <h2>Cleaning should be simple.</h2>
 
     <p>
-      NAYRO is a modern cleaning brand focused on creating
-      practical cleaning solutions with a clean, simple and
-      contemporary experience.
+      NAYRO creates modern cleaning solutions designed
+      for everyday homes and spaces. Our focus is simple:
+      effective products, clean design and a better
+      cleaning experience.
     </p>
-
-  </section>
-
-
-  <section class="contact" id="contact">
-
-    <div class="section-label">Get In Touch</div>
-
-    <h2>Let's connect.</h2>
-
-    <p>
-      Interested in NAYRO products or want to know more?
-    </p>
-
-    <a class="btn" href="mailto:nayro@example.com">
-      Contact NAYRO →
-    </a>
 
   </section>
 
