@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NAYRO | A Cleaner Standard</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f5;
+      color: #111;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7%;
+      background: #fff;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 4px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 70px 7%;
+      background: #fff;
+    }
+
+    .hero p {
+      font-size: 14px;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(50px, 12vw, 100px);
+      line-height: .9;
+      max-width: 900px;
+      letter-spacing: -5px;
+    }
+
+    .hero h1 span {
+      color: #777;
+    }
+
+    .hero button {
+      width: fit-content;
+      margin-top: 35px;
+      padding: 15px 28px;
+      border: none;
+      background: #111;
+      color: #fff;
+      border-radius: 30px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .products {
+      padding: 80px 7%;
+    }
+
+    .section-title {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background: #fff;
+      padding: 30px;
+      min-height: 280px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .product-number {
+      color: #888;
+      font-size: 13px;
+      margin-bottom: auto;
+    }
+
+    .product h3 {
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    .product p {
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .about {
+      padding: 90px 7%;
+      background: #111;
+      color: #fff;
+    }
+
+    .about h2 {
+      font-size: 45px;
+      max-width: 700px;
+      margin-bottom: 25px;
+    }
+
+    .about p {
+      max-width: 650px;
+      line-height: 1.7;
+      color: #ccc;
+    }
+
+    footer {
+      padding: 30px 7%;
+      background: #111;
+      color: #777;
+      border-top: 1px solid #333;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: none;
+      }
+
+      .hero h1 {
+        letter-spacing: -3px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">NAYRO</div>
+
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+    <p>Modern Cleaning Solutions</p>
+
+    <h1>
+      A Cleaner<br>
+      <span>Standard.</span>
+    </h1>
+
+    <button onclick="document.getElementById('products').scrollIntoView()">
+      Explore Products
+    </button>
+  </section>
+
+
+  <section class="products" id="products">
+
+    <h2 class="section-title">Our Products</h2>
+
+    <div class="product-grid">
+
+      <div class="product">
+        <div class="product-number">01</div>
+        <h3>Floor Cleaner</h3>
+        <p>Powerful everyday cleaning for a fresh, clean floor.</p>
+      </div>
+
+      <div class="product">
+        <div class="product-number">02</div>
+        <h3>Bathroom Cleaner</h3>
+        <p>Designed for effective bathroom surface cleaning.</p>
+      </div>
+
+      <div class="product">
+        <div class="product-number">03</div>
+        <h3>Glass Cleaner</h3>
+        <p>Helps keep glass surfaces clean and clear.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="about" id="about">
+
+    <h2>Cleaning should be simple.</h2>
+
+    <p>
+      NAYRO creates modern cleaning solutions designed
+      for everyday homes and spaces. Our focus is simple:
+      effective products, clean design and a better
+      cleaning experience.
+    </p>
+
+  </section>
+
+
+  <footer>
+    © 2026 NAYRO. All rights reserved.
+  </footer>
+
+</body>
+</html>
